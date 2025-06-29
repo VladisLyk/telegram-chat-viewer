@@ -1,0 +1,49 @@
+# README.md
+// filepath: telegram-chat-viewer/backend/README.md
+
+# Telegram Chat Viewer Backend
+
+Це бекенд для Telegram Chat Viewer, побудований на FastAPI. Дозволяє керувати акаунтами Telegram, отримувати чати, повідомлення та працювати з медіа.
+
+## Встановлення
+
+1. Клонуйте репозиторій та перейдіть у папку `backend`:
+    ```sh
+    cd telegram-chat-viewer/backend
+    ```
+2. Встановіть залежності:
+    ```sh
+    pip install -r requirements.txt
+    ```
+
+3. Ініціалізуйте базу даних:
+    ```sh
+    python init_db.py
+    ```
+
+4. Запустіть сервер:
+    ```sh
+    uvicorn main:app --reload
+    ```
+
+## Налаштування
+
+- Основні налаштування зберігаються у файлі [`app/config.py`](app/config.py).
+- Для змін секретів або параметрів Telegram API використовуйте `.env` файл.
+
+## Основні можливості
+
+- Реєстрація та аутентифікація користувачів
+- Додавання Telegram-акаунтів
+- Перегляд чатів та повідомлень
+
+## Структура проекту
+
+- `app/routers/` — маршрути FastAPI
+- `app/database/` — моделі та робота з БД
+- `app/utils/` — допоміжні функції (Telegram, безпека)
+- `app/schemas/` — Pydantic-схеми для валідації
+
+## Ліцензія
+
+MIT
